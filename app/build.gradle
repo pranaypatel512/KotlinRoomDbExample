@@ -24,6 +24,7 @@ android {
 }
 def ANDROID_ARCH_ROOM_VERSION = "1.0.0-alpha3"
 def SUPPORT_LIB_VERSION = "25.4.0"
+def RX_VERSION="2.0.1"
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -31,8 +32,13 @@ dependencies {
     })
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation "com.android.support:appcompat-v7:$SUPPORT_LIB_VERSION"
+    compile "com.android.support:cardview-v7:$SUPPORT_LIB_VERSION"
+    compile "com.android.support:recyclerview-v7:$SUPPORT_LIB_VERSION"
     testImplementation 'junit:junit:4.12'
 
     compile "android.arch.persistence.room:runtime:$ANDROID_ARCH_ROOM_VERSION"
     kapt "android.arch.persistence.room:compiler:$ANDROID_ARCH_ROOM_VERSION"
+    compile "android.arch.persistence.room:rxjava2:$ANDROID_ARCH_ROOM_VERSION"
+    compile "io.reactivex.rxjava2:rxjava:$RX_VERSION"
+    compile "io.reactivex.rxjava2:rxandroid:$RX_VERSION"
 }

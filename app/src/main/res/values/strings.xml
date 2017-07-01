@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">KotlinRoomDbExample</string>
+    <string name="todo_task">To Do Task</string>
+    <string name="add">Add</string>
+    <string name="str_this_is_test">this is test</string>
 </resources>
